@@ -25,7 +25,7 @@ class DataTransformation:
 
     def get_data_transformation_object(self):
         try:
-            logging.info("Data Transformation Initiated")
+            logging.info("preprocessor creation started")
             
             # Categorical and numerical columns
             categorical_cols = ['pclass','sex','cabin','embarked','title']
@@ -56,7 +56,7 @@ class DataTransformation:
                 ('cat_pipeline',cat_pipeline,categorical_cols)
             ])
 
-            logging.info("Data Transformation Completed")
+            logging.info("Preprocessor created and returned")
 
 
             return preprocessor
@@ -70,6 +70,7 @@ class DataTransformation:
     def initiate_data_transformation(self,train_data_path,test_data_path):
 
         try:
+            logging.info("Data Transformation Initiated")
             train_input_feature_df = pd.read_csv(train_data_path)
             test_input_feature_df = pd.read_csv(test_data_path)
             input_feature_df = pd.concat([train_input_feature_df.assign(ind='train'), test_input_feature_df.assign(ind='test')])
@@ -155,7 +156,7 @@ class DataTransformation:
             input_feature_train_df=input_feature_train_df.drop(['ind'],axis=1)
             input_feature_test_df=input_feature_test_df.drop(['ind'],axis=1)
             # input_feature_test_df.to_csv('artifacts\input_test_data.csv',index=False)
-            
+           
             # Data transformation
             input_feature_train_arr = preprocessing_obj.fit_transform(input_feature_train_df)
             input_feature_test_arr = preprocessing_obj.transform(input_feature_test_df)
@@ -170,6 +171,7 @@ class DataTransformation:
                         obj = preprocessing_obj
 
             )
+            logging.info("Data Transformation Completed")
 
             return (
                 train_arr,

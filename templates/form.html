@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Input Form</title>
+    <h1><center>Please enter the following data</center></h1>
+    <style>
+        head {
+            font-family: Arial, sans-serif;
+            background-color: #f8f8f8;
+            margin: 0;
+            padding: 20px;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #65afb9;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 500px;
+            margin: auto;
+            background-color: #96d37d;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        label, input {
+            display: block;
+            margin-bottom: 10px;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: rgb(255, 255, 255);
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <form action="/submit" method="post">
+        <label for="pclass">Pclass:</label>
+        <input type="number" name="pclass" required><br>
+
+        <label for="sex">Sex:</label>
+        <input type="text" name="sex" required><br>
+
+        <label for="age">Age:</label>
+        <input type="number" name="age"  required><br>
+
+        <label for="sibsp">Sibsp:</label>
+        <input type="number" name="sibsp" required><br>
+
+        <label for="parch">Parch:</label>
+        <input type="number" name="parch" required><br>
+
+        <label for="fare">Fare:</label>
+        <input type="number" name="fare"  required><br>
+
+        <label for="cabin">Cabin:</label>
+        <input type="text" name="cabin" required><br>
+
+        <label for="embarked">Embarked:</label>
+        <input type="text" name="embarked" required><br>
+
+        <label for="title">Title:</label>
+        <input type="text" name="title" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+    <h2><center><bold>{{final_result}}</bold></center></h2>
+</body>
+</html>
