@@ -20,24 +20,38 @@ The variables on our extracted dataset are pclass, survived, name, age, embarked
 
 Downloaded from openml.org.
 
-```
+
 
 How to run the project:
 1. Create a new conda environment with the following command:
 
+```
 conda create -p venv python==3.9.17 -y
+```
 
 2. Activate the conda environment with the following command:
+```
 conda activate venv/
+```
 
 3. Install the package requirements:
+```
 pip install -r requirements.txt
+```
 
 4. Run:
-Python app.py
+```
+python src\pipelines\training_pipeline.py ## this runs the training pipeline and creats artifacts
+```
 
-5. Go to:
-home page: 120.0.0.1:5000/
-submit page: 120.0.0.1:5000/submit
+5. Run:
+```
+python app.py ## initiates flask application
+```
+
+6. Go to:
+```
+home page: 120.0.0.1:5000/   ## home page
+submit page: 120.0.0.1:5000/submit  ## prediction page
 
 ```
