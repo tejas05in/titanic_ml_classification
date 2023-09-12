@@ -19,3 +19,25 @@ http://biostat.mc.vanderbilt.edu/wiki/pub/Main/DataSets/titanic3info.txt
 The variables on our extracted dataset are pclass, survived, name, age, embarked, home.dest, room, ticket, boat, and sex. pclass refers to passenger class (1st, 2nd, 3rd), and is a proxy for socio-economic class. Age is in years, and some infants had fractional values. The titanic2 data frame has no missing data and includes records for the crew, but age is dichotomized at adult vs. child. These data were obtained from Robert Dawson, Saint Mary's University, E-mail. The variables are pclass, age, sex, survived. These data frames are useful for demonstrating many of the functions in Hmisc as well as demonstrating binary logistic regression analysis using the Design library. For more details and references see Simonoff, Jeffrey S (1997): The "unusual episode" and a second statistics course. J Statistics Education, Vol. 5 No. 1.
 
 Downloaded from openml.org.
+
+```
+
+How to run the project:
+1. Create a new conda environment with the following command:
+
+conda create -p venv python==3.9.17 -y
+
+2. Activate the conda environment with the following command:
+conda activate venv/
+
+3. Install the package requirements:
+pip install -r requirements.txt
+
+4. Run:
+Python app.py
+
+5. Go to:
+home page: 120.0.0.1:5000/
+submit page: 120.0.0.1:5000/submit
+
+```
