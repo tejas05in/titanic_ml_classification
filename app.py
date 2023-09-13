@@ -27,7 +27,7 @@ def submit():
         predict_pipeline = PredictPipeline()
         pred = predict_pipeline.predict(final_new_data)
 
-        if pred[0] == 1:
+        if pred[0] == 0.0:
             result = 'Death'
         else:
             result = 'Survived'
